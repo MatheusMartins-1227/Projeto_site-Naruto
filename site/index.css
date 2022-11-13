@@ -17,3 +17,9 @@ nav {
     justify-content: space-between;
     margin: auto 30px;
 }
+
+header {
+    height: 100vh;
+    background: url(./assets/imagens/Meu\ projeto-final.jpg);
+}
+
