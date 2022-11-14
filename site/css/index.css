@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2? family= Irish+Grover & display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* HEADER */
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav li {
+    margin: 0 15px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 5px;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+
+}
+
+/* BANNER */
+
+header {
+    height: 100vh;
+    background: url(/site/assets/imagens/Meu\ projeto-final.jpg);
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 100%;
+}
+
+
+
+header h1 {
+    font-weight: 100;
+    align-items: center;
+    height: 35%;
+    margin: auto 30px;
+    color: #F9EF11;
+    -webkit-text-stroke-width: 2px;
+    /* largura da borda */
+    -webkit-text-stroke-color: #000;
+    /* cor da borda */
+}
+
+.texto {
+    font-size: 35px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin: auto 300px;
+    background-color: whitesmoke;
+    opacity: 0.6;
+}
+
+.container_titulo {
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+/* MAIN */
+
+
+main {
+    background: #003668;
+    height: 100%;
+}
+
+.container_banner {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    height: 350px;
+}
+
+
+/* .titulo_amigos p {
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    margin-left: 80px;
+     width: 20%;
+    height: 40px;
+    border: 3px solid #000000;
+    margin: 20px;
+}  */
+
+
+.texto_sobre_naruto h3 {
+    max-width: 400px;
+    margin: auto 40px;
+    border: 1px solid;
+    border-radius: 20px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    font-size: 30px;
+
+}
+
+/* projetor da cor antes do footer */
+
+/* .cor_contraste {
+    position: absolute;
+    width: 100%;
+    height: 446px;
+
+    background: linear-gradient(131.56deg, #003668 41.42%, #FFA500 77.87%);
+} */
+
+
+/* FOOTER */
+
+
+.parte_azul {
+    background: #001937;
+    padding: 20px;
+}
+
+.parte_laranja {
+    background: orange;
+    padding: 1px;
+}
+
+.parte_laranja ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.parte_laranja span {
+    justify-content: flex-start;
+}
