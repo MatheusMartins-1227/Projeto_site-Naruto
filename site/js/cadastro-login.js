@@ -1,6 +1,6 @@
-var formEntrar = document.querySelector('#Entrar')
-var formCadatrar = document.querySelector('#cadastrar')
-var btColor = document.querySelector('.btColor')
+const formEntrar = document.querySelector('#entrar')
+const formCadatrar = document.querySelector('#cadastrar')
+const btColor = document.querySelector('.btColor')
 
 document.querySelector('#btLogar')
   .addEventListener('click', () => {

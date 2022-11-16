@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2? family= Irish+Grover & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'irish grover', sans-serif;
+  font-family: "irish grover", sans-serif;
 }
 
 /* HEADER */
@@ -46,6 +46,8 @@ form {
   width: 300px;
   height: 400px;
 }
+
+
 
 .botaoForm {
   margin-top: 40px;
@@ -103,12 +105,26 @@ button[type="submit"]:hover {
 }
 
 
-#Entrar {
+#entrar {
   left: 25px;
+}
+
+#entrar h3 {
+  position: relative;
+  left: 120px;
+  top: 30px;
+  /* font-family: "irish grover"; */
+  font-size: 25px;
+  font-weight: 800;
 }
 
 #cadastrar {
   left: 450px;
+}
+
+#cadastrar h3 {
+  position: relative;
+
 }
 
 

@@ -67,7 +67,8 @@ header nav {
 
 header {
     height: 100vh;
-    background: url(/site/assets/imagens/Meu\ projeto-final.jpg);
+    background-image: url(/Projeto_site-Naruto/site/assets/imagens/imagem-fundo-projeto-final.jpg);
+    background-size: cover;
     position: relative;
     top: 0;
     height: auto;
