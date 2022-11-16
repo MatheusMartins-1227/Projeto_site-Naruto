@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2? family= Irish+Grover & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Inter & family= Irish+Grover & display=swap');
+
 
 body {
     margin: 0;
     padding: 0;
+    font-family: 'inter', 'irish grover';
 }
 
 
@@ -13,7 +15,7 @@ header nav ul {
     display: flex;
 }
 
-header nav li {
+header nav a {
     margin: 0 15px;
 }
 
@@ -27,6 +29,38 @@ header nav {
     width: 100%;
     z-index: 1;
 
+}
+
+.botao_home {
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    background: #E86F40;
+    border: 2px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.botao_home:hover {
+    background: #F9EF11;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.botao_login_cad {
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    background: #E86F40;
+    border: 2px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.botao_login_cad:hover {
+    background: #F9EF11;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* BANNER */
@@ -85,18 +119,6 @@ main {
 }
 
 
-/* .titulo_amigos p {
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    margin-left: 80px;
-     width: 20%;
-    height: 40px;
-    border: 3px solid #000000;
-    margin: 20px;
-}  */
-
-
 .texto_sobre_naruto h3 {
     max-width: 400px;
     margin: auto 40px;
@@ -107,16 +129,6 @@ main {
     font-size: 30px;
 
 }
-
-/* projetor da cor antes do footer */
-
-/* .cor_contraste {
-    position: absolute;
-    width: 100%;
-    height: 446px;
-
-    background: linear-gradient(131.56deg, #003668 41.42%, #FFA500 77.87%);
-} */
 
 
 /* FOOTER */

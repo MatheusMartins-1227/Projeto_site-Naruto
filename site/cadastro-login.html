@@ -2,50 +2,51 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="./css/cadastro-login.css">
-  <link rel="icon" type="image/png" href="./assets/icons/profile2user.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar | Se cadastrar</title>
+    <link rel="stylesheet" href="./css/cadastro-login.css">
+    <link rel="icon" type="image/png" href="./assets/icons/profile2user.png" />
 </head>
 
 <body>
-    
+
     <header>
-        <img src="./assets/imagens/Captura_de_Tela__10_-removebg-preview 4 (1).png" width="70%">
-        
-        
+        <div class="logo">
+            <img src="./assets/imagens/Captura_de_Tela__10_-removebg-preview 4 (1).png" width="70%">
+        </div>
+
         <div class="container">
             <div class="botaoForm">
                 <div class="btColor"></div>
                 <button id="btLogar">Entrar</button>
                 <button id="btCadastro">Cadastrar</button>
             </div>
-            
+
             <form id="Entrar">
                 <h3>Email</h3>
                 <input type="text" placeholder="SeuEmail@.com" required />
                 <h3>Senha</h3>
-                    <input type="password" placeholder="******" required />
-                    <button type="submit">Entrar</button>
-                    <button onclick="voltar()">Home</button>
-                </form>
-                
-                <form id="cadastrar">
-                    <h3>Seu email</h3>
-                    <input type="text" placeholder="SeuEmail@.com" required />
-                    <h3>Sua senha</h3>
-                    <input type="password" placeholder="Senha" required />
-                    <h3>Confirmar senha</h3>
-                    <input type="password" placeholder="Confirmar senha" required />
-                    <button type="submit">Cadastrar</button>
-                    <button onclick="voltar()">Home</button>
-                </form>
-            </div>
-        </header>
-            
-  <script src="./cadastro-login.js"></script>
+                <input type="password" placeholder="******" required />
+                <button type="submit">Entrar</button>
+                <a class="botao_home" href="index.html">Home</a>
+            </form>
+
+            <form id="cadastrar">
+                <h3>Seu email</h3>
+                <input type="text" placeholder="SeuEmail@.com" required />
+                <h3>Sua senha</h3>
+                <input type="password" placeholder="Senha" required />
+                <h3>Confirmar senha</h3>
+                <input type="password" placeholder="Confirmar senha" required />
+                <button type="submit">Cadastrar</button>
+                <a class="botao_home" href="index.html">Home</a>
+            </form>
+        </div>
+    </header>
+
+    <script src="./js/cadastro-login.js"></script>
 </body>
 
 </html>

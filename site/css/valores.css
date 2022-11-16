@@ -1,0 +1,62 @@
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav a {
+    margin: 0 15px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 5px;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+
+}
+
+.botao_home {
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    background: #E86F40;
+    border: 2px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.botao_home:hover {
+    background: #F9EF11;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.botao_login_cad {
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    background: #E86F40;
+    border: 2px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.botao_login_cad:hover {
+    background: #F9EF11;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
