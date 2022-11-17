@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2? family= Inter & family= Irish+Grover & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 
 
 body {
@@ -40,6 +40,7 @@ header nav {
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     transition: 0.5s;
+    font-family: 'inter';
 }
 
 .botao_home:hover {
@@ -56,6 +57,7 @@ header nav {
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     transition: 0.5s;
+    font-family: 'inter';
 }
 
 .botao_login_cad:hover {
@@ -67,12 +69,13 @@ header nav {
 
 header {
     height: 100vh;
-    background-image: url(/Projeto_site-Naruto/site/assets/imagens/imagem-fundo-projeto-final.jpg);
+    background-image: url(/assets/imagens/imagem-fundo-konoha.jpg);
     background-size: cover;
     position: relative;
     top: 0;
     height: auto;
     width: 100%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.45);
 }
 
 
@@ -81,12 +84,13 @@ header h1 {
     font-weight: 100;
     align-items: center;
     height: 35%;
-    margin: auto 30px;
+    margin: auto 50px;
     color: #F9EF11;
     -webkit-text-stroke-width: 2px;
     /* largura da borda */
     -webkit-text-stroke-color: #000;
     /* cor da borda */
+    
 }
 
 .texto {
@@ -98,7 +102,8 @@ header h1 {
     opacity: 0.6;
 }
 
-.container_titulo {
+
+.caixa {
     justify-content: center;
     align-items: center;
     padding: 100px;
@@ -115,8 +120,41 @@ main {
 .container_banner {
     display: flex;
     justify-content: center;
-    padding: 20px;
     height: 350px;
+    flex-direction: column;
+    position: relative;
+    padding: 50px;
+    top: 30px;
+}
+
+.container_banner img {
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.50);
+    border-radius: 80px;
+}
+
+.valores {
+    position: relative;
+    bottom: 80%;
+    left: 50px;
+}
+
+.valores ul {
+    list-style: none;
+    display: flex;
+}
+
+.valores p {
+    background: #F9EF11;
+    border: 2px solid #000000;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 10px;
+}
+
+.valores p:hover {
+    background: #E86F40;
+    box-shadow: 0px 6px px rgba(0, 0, 0, 0.25);
 }
 
 
