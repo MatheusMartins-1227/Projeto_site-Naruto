@@ -90,10 +90,10 @@ header h1 {
     /* largura da borda */
     -webkit-text-stroke-color: #000;
     /* cor da borda */
-    
+
 }
 
-.texto {
+.texto_banner {
     font-size: 35px;
     border: 1px solid;
     border-radius: 20px;
@@ -103,7 +103,7 @@ header h1 {
 }
 
 
-.caixa {
+.caixa_banner {
     justify-content: center;
     align-items: center;
     padding: 100px;
@@ -117,7 +117,7 @@ main {
     height: 100%;
 }
 
-.container_banner {
+.container_banner2 {
     display: flex;
     justify-content: center;
     height: 350px;
@@ -127,7 +127,7 @@ main {
     top: 30px;
 }
 
-.container_banner img {
+.container_banner2 img {
     box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.50);
     border-radius: 80px;
 }
@@ -157,17 +157,66 @@ main {
     box-shadow: 0px 6px px rgba(0, 0, 0, 0.25);
 }
 
+.container_principal img {
+    padding-right: 50%;
+    padding-left: 20px;
+    position: relative;
+    margin: 40px;
+    bottom: 50px;
+}
 
-.texto_sobre_naruto h3 {
-    max-width: 400px;
-    margin: auto 40px;
+.container_principal {
+    position: relative;
+    bottom: 100px;
+}
+
+
+.texto_naruto p {
+    color: black;
+    position: relative;
+    bottom: 210px;
     border: 1px solid;
     border-radius: 20px;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #000;
-    font-size: 30px;
-
+    background: white;
+    left: 100px;
+    margin-right: 900px;
+    padding: 14px;
 }
+
+.texto_sobre {
+    position: relative;
+    bottom: 225px;
+    padding-left: 148px;
+    padding-right: 12px;
+}
+
+.texto_sobre p {
+    font-family: 'inter';
+    border: 2px solid;
+    margin-right: 832px;
+    font-size: 30px;
+    padding: 2px;
+    background: #D9D9D9;
+}
+
+.divisao_carrosel {
+    display: flex;
+    position: relative;
+    margin-right: 20px;
+}
+
+/* .amigos_carrosel {
+    width: 500%;
+    position: relative;
+    right: 650%;
+    border: 1px px solid;
+    border-radius: 10px;
+    background: rgba(217, 217, 217, 0.5);
+
+} */
+
+
+
 
 
 /* FOOTER */
