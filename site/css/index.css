@@ -69,7 +69,7 @@ header nav {
 
 header {
     height: 100vh;
-    background-image: url(/assets/imagens/imagem-fundo-konoha.jpg);
+    background-image: url(../assets/imagens/imagem-fundo-konoha.jpg);
     background-size: cover;
     position: relative;
     top: 0;
@@ -168,6 +168,12 @@ main {
 .container_principal {
     position: relative;
     bottom: 100px;
+    border: solid 1px blue;
+}
+
+.container_carrosel {
+    width: 100%;
+    border: solid 1px red;
 }
 
 
@@ -181,6 +187,7 @@ main {
     left: 100px;
     margin-right: 900px;
     padding: 14px;
+    border: solid 1px yellow;
 }
 
 .texto_sobre {
@@ -188,6 +195,7 @@ main {
     bottom: 225px;
     padding-left: 148px;
     padding-right: 12px;
+    border: solid 1px orange;
 }
 
 .texto_sobre p {
@@ -197,12 +205,14 @@ main {
     font-size: 30px;
     padding: 2px;
     background: #D9D9D9;
+    border: solid 1px blueviolet;
 }
 
-/* .divisao_carrosel {
+ .divisao_carrosel {
     display: flex;
     position: relative;
     margin-right: 20px;
+    border: solid 1px green;
 }
 
 .amigos_carrosel {
@@ -212,9 +222,14 @@ main {
     border: 1px px solid;
     border-radius: 10px;
     background: rgba(217, 217, 217, 0.5);
+    border: solid 1px pink;
 
-} */
+} 
 
+
+.imagem_naruto {
+    border: solid 1px yellow;
+}
 
 
 
