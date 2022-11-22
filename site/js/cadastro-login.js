@@ -15,3 +15,9 @@ document.querySelector('#btCadastro')
     formCadatrar.style.left = "25px"
     btColor.style.left = "110px"
 })
+
+const cadastrar = formCadatrar
+
+function cadstrar(){
+  
+}
