@@ -244,23 +244,37 @@ main {
     border: 2px solid black;
 }
 
+.imagens img {
+    width: 50vh;
+    height: 200px;
+    position: absolute;
+    margin: 97px;
+    border: 2px solid black;
+}
+
 .degrade {
     background: linear-gradient(131.56deg, #003668 41.42%, #FFA500 77.87%);
 }
 
 .video img {
-    width: 80vw;
-    height: 60vh;
+    width: 90vw;
+    height: 70vh;
     position: relative;
-    margin: 40px;
+    margin: 10px;
     left: 60px;
-    bottom: 100px;
+    bottom: 125px;
 }
 
 
 
 /* FOOTER */
 
+
+.footer_img {
+    position: relative;
+    top: 124px;
+    width: 15%;
+}
 
 .parte_azul {
     background: #001937;
