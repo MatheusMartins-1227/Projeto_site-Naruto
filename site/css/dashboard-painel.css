@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'irish grover';
+}
+
+body {
+    background-image:linear-gradient(#333, #333);
+}
+
+
+    /* ESTRUTURA DA PAGINA (DASHBOARD NO GERAL) */
+
+
+.dashboard-painel {
+    width: 90%;
+    height: 92vh;
+    position: relative;
+    left: 5%;
+    top: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.container_dashboard {
+    width: 20%;
+    height: 92vh;
+    border: solid 1px;
+    border-radius: 20px;
+    background-image: url("../assets/imagens/menu-3.jfif");
+}
+
+.usuario {
+    width: 134%;
+    height: 120px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    position: relative;
+    bottom: 2px;
+    right: 2px;
+}
+
+.usuario h3 {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    top: 30%;
+}
+
+.menu {
+    position: relative;
+    top: 20px;
+    margin: 30px;
+    font-size: 20px;
+  
+}
+
+.menu a {
+    display: flex;
+    flex-direction: column;
+    line-height: 70px;
+    background-color: #F9EF11;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.menu a:hover {
+    background: #E86F40;
+    box-shadow: 0px 6px px rgba(0, 0, 0, 0.25);
+}
+
+.home {
+    position: relative;
+    top: 80px;
+}
+
+.feedback {
+    position: relative;
+    top: 30px;
+}
+
+.painel {
+    position: relative;
+    top: 10px;
+}
+
+.databook {
+    position: relative;
+    bottom: 10px;
+}
+
+.menu p {
+    position: relative;
+    left: 13%;
+}

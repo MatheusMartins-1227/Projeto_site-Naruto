@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'irish grover';
+}
+
+body {
+    background-image:linear-gradient(#333, #333);
+}
+
+
+    /* ESTRUTURA DA PAGINA (DASHBOARD NO GERAL) */
+
+
+.dashboard {
+    width: 90%;
+    height: 92vh;
+    position: relative;
+    left: 5%;
+    top: 20px;
+    border-radius: 20px;
+    background: url("../assets/imagens/menu-8.jpg")
+}
+
+.container_dashboard {
+    width: 20%;
+    height: 92vh;
+    border: solid 1px;
+    border-radius: 20px;
+    background-image: url("../assets/imagens/menu-3.jfif");
+}
+
+.usuario {
+    width: 134%;
+    height: 120px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    position: relative;
+    bottom: 2px;
+    right: 2px;
+}
+
+.usuario h3 {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    top: 30%;
+}
+
+.menu {
+    position: relative;
+    top: 20px;
+    margin: 30px;
+    font-size: 20px;
+  
+}
+
+.menu a {
+    display: flex;
+    flex-direction: column;
+    line-height: 70px;
+    background-color: #F9EF11;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.menu a:hover {
+    background: #E86F40;
+    box-shadow: 0px 6px px rgba(0, 0, 0, 0.25);
+}
+
+.home {
+    position: relative;
+    top: 80px;
+}
+
+.feedback {
+    position: relative;
+    top: 30px;
+}
+
+.painel {
+    position: relative;
+    top: 10px;
+}
+
+.databook {
+    position: relative;
+    bottom: 10px;
+}
+
+.menu p {
+    position: relative;
+    left: 13%;
+}
+
+/* PAGINA DATABOOK */
+
+
+.form_principal {
+    width: 50vw;
+    height: 55vh;
+    position: relative;
+    bottom: 50%;
+    left: 120%;
+    border: solid 1px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.form_titulo {
+    position: relative;
+    left: 33%;
+    width: 40%;
+    bottom: 10%;
+    border: solid 2px;
+    border-radius: 10px;
+    background-color: red;
+}
+
+.form_titulo h3 {
+    position: relative;
+    left: 20%;
+    width: 60%;
+}
+
+.regras {
+    width: 15vw;
+    position: relative;
+    bottom: 100%;
+    left: 410%;
+    height: 145px;
+    border: solid 1px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.regras_titulo h3 {
+    width: 100%;
+    position: relative;
+    bottom: 25px;
+    left: 22%;
+}
+
+.sucesso {
+    border: solid 1px;
+    position: relative;
+    left: 415%;
+    bottom: 160%;
+    width: 75%;
+    display: none;
+}
+
+.sucesso_texto p {
+    font-size: 20px;
+    margin: 5px;
+    position: relative;
+    left: 15%;
+    width: 95px;
+}

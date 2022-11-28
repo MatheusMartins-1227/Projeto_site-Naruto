@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naruzeiros | Home</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js" defer></script>
     <link rel="icon" type="image/png" href="./assets/icons/kunai 3.png" />
 </head>
 
@@ -21,7 +22,7 @@
                 <li><a class="botao_login_cad" href=cadastro-login.html>Entrar | Se cadastrar</a></li>
             </ul>
         </nav>
-
+ 
         <!-- BANNER -->
 
         <section>
@@ -42,9 +43,10 @@
                     <img src="./assets/imagens/NARUZEIROS 2.png">
                     <div class="valores">
                         <ul>
-                            <li>
-                                <p>ESSE É O MEU JEITO<br>
-                                    NINJA DE SER</p>
+                            <li><a href="./valores.html">
+                                ESSE É O MEU JEITO<br>
+                                    NINJA DE SER
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -82,24 +84,71 @@
                         Seus amigos
                     </p>
                     <div class="carrosel">
-                       <!-- <div class="imagens">
-                        <img src="../site/assets/imagens/amigosNaruto-rockLee.webp">
-                        <img src="../site/assets/imagens/amigosNaruto-sakura.jfif">
-                        <img src="../site/assets/imagens/amigosNaruto-sasuke.webp">
-                        <img src="../site/assets/imagens/amigosNaruto-shikamaru.png">
-                       </div> -->
+                        <div class="caixa_carrosel">
+                            <div class="container_img" id="img">
+                                <img class="car" src="../site/assets/imagens/amigosNaruto-rockLee.webp">
+                                <img class="car" src="../site/assets/imagens/amigosNaruto-sakura.jfif">
+                                <img class="car" src="../site/assets/imagens/amigosNaruto-sasuke.webp">
+                                <img class="car" src="../site/assets/imagens/amigosNaruto-shikamaru.png">
+                            </div>
+                        </div>
+                        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam qui deleniti explicabo tempore
+                            suscipit impedit! Voluptates quo ea, perferendis eligendi labore, vitae vel voluptas
+                            similique sequi, architecto officiis temporibus quod.</h3>
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
         </section>
 
         <section class="degrade">
             <div class="container_video">
+                <div class="video_fundo">
+                    <img src="../site/assets/imagens/imagem_manga-fundo.png">
+                </div>
                 <div class="video">
-                    <img src="../site/assets/imagens/fundo-manga-2.jfif" alt="">
+                    <iframe width="697" height="392" src="https://www.youtube.com/embed/me9Iza7PrWY?autoplay=1"
+                        title="Naruto Amv edit - Pode deixar Sakura se a lua cair eu te protejo" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </div>
+
+            <div class="container_arcos">
+                <div class="texto_arcos">
+                    <h3>Os principais<br> arcos do anime</h3>
+                </div>
+
+                <section class="arcos_anime">
+                <div class="container_carrosel_arcos">
+                    <input type="radio" name="slider" id="item-1" checked>
+                    <input type="radio" name="slider" id="item-2" checked>
+                    <input type="radio" name="slider" id="item-3" checked>
+                    <!-- <input type="radio" name="slider" id="item-4" checked> -->
+                    <div class="cards">
+                        <label class="card" for="item-1" id="song-1">
+                            <img class="img_arcos" src="../site/assets/imagens/arco-1_a-primeira_missao.webp">
+                        </label>
+                        <label class="card" for="item-2" id="song-2">
+                            <img class="img_arcos" src="../site/assets/imagens/arco-2_exame-chunin.jpg">
+                        </label>
+                        <label class="card" for="item-3" id="song-3">
+                            <img class="img_arcos" src="../site/assets/imagens/arco-3_a-busca-peka-tsunade.webp">
+                        </label>
+                        <!-- <label class="card" for="item-1" id="song-4">
+                            <img class="img_arcos" src="../site/assets/imagens/arco-4">
+                        </label> -->
+                    </div>
+                </div>
+            </section>
+            </div>
+
+
+
+
+
+
+            <img class="img_footer" src="../site/assets/imagens/pagina_-_naruto_logo_4-removebg-preview 1.png">
         </section>
 
 

@@ -142,7 +142,8 @@ main {
     display: flex;
 }
 
-.valores p {
+
+.valores li {
     background: #F9EF11;
     border: 2px solid #000000;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
@@ -151,7 +152,7 @@ main {
     padding: 10px;
 }
 
-.valores p:hover {
+.valores li:hover {
     background: #E86F40;
     box-shadow: 0px 6px px rgba(0, 0, 0, 0.25);
 }
@@ -164,7 +165,7 @@ main {
 }
 
 .container_principal {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: relative;
     width: 100%;
     margin: 1%;
@@ -172,7 +173,12 @@ main {
 
 .container_carrosel {
     width: 100%;
-    border: solid 1px blue;
+    /* border: solid 1px blue; */
+}
+
+.imagem_naruto {
+    position: relative;
+    right: 45px;
 }
 
 
@@ -184,7 +190,7 @@ main {
     background: white;
     left: 171px;
     padding: 13px;
-    border: solid 1px yellow;
+    /* border: solid 1px yellow; */
     width: 51%;
     font-size: 21px;
 }
@@ -192,7 +198,7 @@ main {
 .texto_sobre {
     position: relative;
     bottom: 22%;
-    border: solid 1px green;
+    /* border: solid 1px green; */
     width: 55%;
     left: 30%;
 }
@@ -206,13 +212,14 @@ main {
     position: relative;
     left: 20%;
     border: 2px solid black;
+    top: 10px;
 }
 
  .divisao_carrosel {
     display: flex;
     position: relative;
     margin-right: 20px;
-    border: solid 1px black;
+    /* border: solid 1px black; */
 }
 
 .amigos_carrosel {
@@ -222,19 +229,19 @@ main {
     border: 1px px solid;
     border-radius: 10px;
     background: rgba(217, 217, 217, 0.5);
-    border: solid 1px whitesmoke;
+    /* border: solid 1px whitesmoke; */
 
 } 
 
 .sobre_seus_amigos {
-    border: 1px solid mediumvioletred;
+    /* border: 1px solid mediumvioletred; */
     height: 5%;
 }
 
 .sobre_seus_amigos p {
     position: relative;
     width: 25%;
-    left: 35%;
+    left: 22%;
     font-family: auto;
     font-size: 20px;
     bottom: 20px;
@@ -244,18 +251,147 @@ main {
     border: 2px solid black;
 }
 
+.carrosel {
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+}
+
+.container_img {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.car {
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+}
+
+.video {
+    position: relative;
+    width: 58vw;
+    height: 50vh;
+    left: 20%;
+    bottom: 560px;
+}
+
+.container_video {
+    height: 80vh;
+}
+
+.texto_arcos {
+    width: 20%;
+    position: relative;
+    left: 40%;
+    border: 2px solid;
+    background-color: #D9D9D9;
+}
+
+.texto_arcos h3 {
+    margin: 10px;
+    position: relative;
+    left: 10px;
+}
+
+
 .degrade {
     background: linear-gradient(131.56deg, #003668 41.42%, #FFA500 77.87%);
 }
 
-.video img {
+.video_fundo img {
     width: 80vw;
-    height: 60vh;
+    height: 75vh;
     position: relative;
     margin: 40px;
     left: 60px;
     bottom: 100px;
 }
+
+.arcos_anime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    background: #000000;
+    transition: background 0.4s ease-in;
+}
+
+input[type=radio] {
+    display: none;
+
+}
+
+.img_arcos {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.container_carrosel_arcos {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    display: flex;
+    transform: preserve-3d;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 245px;
+    margin-top: 20px;
+}
+
+#item-1:checked ~ .cards #song-3,
+#item-2:checked ~ .cards #song-1,
+#item-3:checked ~ .cards #song-2{
+    transform: translateX(-40%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2,
+#item-2:checked ~ .cards #song-3,
+#item-3:checked ~ .cards #song-1{
+    transform: translateX(40%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1,
+#item-2:checked ~ .cards #song-2,
+#item-3:checked ~ .cards #song-3{
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+#item-1:checked ~ .cards #song-1 .img_arcos,
+#item-2:checked ~ .cards #song-2 .img_arcos,
+#item-3:checked ~ .cards #song-3 .img_arcos{
+    box-shadow: #001937;
+}
+
+
 
 
 
@@ -280,4 +416,10 @@ main {
 
 .parte_laranja span {
     justify-content: flex-start;
+}
+
+.img_footer {
+    position: relative;
+    top: 124px;
+    width: 18%;
 }
