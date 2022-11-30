@@ -34,7 +34,25 @@
                 <h3>MEU DATABOOK</h3>
             </div>
             <div class="card_principal">
-                <!-- <p>input dos atributos</p> -->
+                <p>Personagem:<br></p>
+                <select name="" id="personagens">
+                    <option value="0">Selecione:</option>
+                    <option value="1">Hashirama</option>
+                    <option value="2">Tobirama</option>
+                    <option value="3">Hiruzen</option>
+                </select>
+                <p>Atributos:<br></p>
+                Força: <br>
+                <input type="number" id="input_forca">
+                <p>Resistência: <br></p>
+                <input type="number" id="input_resistencia"> <br>
+                <p>Velocidade: <br></p>
+                <input type="number" id="input_velocidade"> 
+                <p>Chakra: <br></p>
+                <input type="number" id="input_chakra"> <br>
+                <button onclick="catalogar()">
+                    Catalogar Personagem
+                </button>
             </div>
         </div>
 
@@ -43,7 +61,7 @@
                 <h3>Regras</h3>
             </div>
             <div class="regra_texto">
-                <p></p>
+                <p>Todos os atributos são avaliados de 0 á 100%</p>
             </div>
         </div>
 
@@ -58,3 +76,21 @@
     
 </body>
 </html>
+
+<script>
+    function catalogar() {
+        var forca = Number(input_forca.value);
+        var resistencia = Number(input_resistencia.value);
+        var velocidade = Number(input_velocidade.value);
+        var chakra = Number(input_chakra.value);
+
+        if (forca < 0 || forca > 100 ||
+            resistencia < 0 || resistencia > 100 ||
+            velocidade < 0 || velocidade > 100 ||
+            chakra < 0 || chakra > 100) {
+            alert("errado")
+        }else {
+            alert("catalogado com sucesso !!!")
+        }
+    }
+</script>

@@ -14,10 +14,27 @@ document.querySelector('#btCadastro')
     formEntrar.style.left = "-450px"
     formCadatrar.style.left = "25px"
     btColor.style.left = "110px"
-})
+}) 
 
-const cadastrar = formCadatrar
 
-function cadstrar(){
-  
+//  VALIDAÇÃO DE CADASTRO
+
+function cadastrar() {
+  const email = input_email.value;
+  const senha = input_senha.value;
+  const conf_sennha = input_conf_senha;
+
+  // if (email.indexOf("@") > -1) {
+  //   alert("Tem arroba !");
+  // } else {
+  //   alert("Não tem arroba !");
+  // }
+
+ 
+  if ( senha != conf_sennha) {
+    alert("senhas diferentes")
+  }else {
+    alert("cadastrado")
+  }
+
 }

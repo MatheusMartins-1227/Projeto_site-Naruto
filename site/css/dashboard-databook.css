@@ -163,3 +163,7 @@ body {
     left: 15%;
     width: 95px;
 }
+
+.card_principal {
+    border: solid 1px blueviolet;
+}
