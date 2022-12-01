@@ -38,14 +38,13 @@ body {
 }
 
 
-form {
+#cadastrar, #entrar {
   position: absolute;
   margin-top: 80px;
   transition: .5s;
   width: 300px;
   height: 400px;
 }
-
 
 
 .botaoForm {

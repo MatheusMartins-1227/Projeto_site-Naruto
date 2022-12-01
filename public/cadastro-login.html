@@ -8,7 +8,7 @@
     <title>Entrar | Se cadastrar</title>
     <link rel="stylesheet" href="./css/cadastro-login.css">
     <link rel="icon" type="image/png" href="./assets/icons/profile2user.png" />
-
+    <script src="./js/cadastro-login.js"></script>
 </head>
 
 <body>
@@ -20,42 +20,39 @@
 
         <div class="container">
             <div class="botaoForm">
-                <div class="btColor"></div>
-                <button id="btLogar">Entrar</button>
-                <button id="btCadastro">Cadastrar</button>
+                <div class="btColor" id="btColor"></div>
+                <button id="btLogar" onclick="abaLogar()">Entrar</button>
+                <button id="btCadastro" onclick="abaCadastrar()">Cadastrar</button>
             </div>
 
             <div id="entrar">
                 <h3>Email</h3>
-                <input type="text" placeholder="SeuEmail@.com" required />
+                <input type="text" id="input_email_log" placeholder="SeuEmail@.com" />
                 <h3>Senha</h3>
-                <input type="password" placeholder="******" required />
-                <button type="submit">Entrar</button>
+                <input type="password" id="input_senha_log" placeholder="******" />
+                <button onclick="validarLogin()">Entrar</button>
                 <a class="botao_home" href="index.html">Home</a>
             </div>
  
-            <form id="cadastrar">
+            <div id="cadastrar">
                 <h3>Seu email</h3>
-                <input type="text" id="input_email_cad" placeholder="SeuEmail@.com" required />
+                <input type="text" id="input_email_cad" placeholder="SeuEmail@.com" />
                 <h3>Sua senha</h3>
-                <input type="password" id="input_senha_cad" placeholder="Senha" required />
+                <input type="password" id="input_senha_cad" placeholder="Senha" />
                 <h3>Confirmar senha</h3>
-                <input type="password" id="input_conf_senha_cad" placeholder="Confirmar senha" required />
-                <button onclick="validar_cadastro()" type="submit">Cadastrar</button>
+                <input type="password" id="input_conf_senha_cad" placeholder="Confirmar senha" />
+                <button onclick="validarCadastro()">Cadastrar</button>
                 <a class="botao_home" href="index.html">Home</a>
                 <select id="sua_aldeia">
-                    <option value="1">Vila Oculta da Folha</option>
-                    <option value="2">Vila Oculta da Névoa</option>
-                    <option value="3">Vila Oculta da Pedra</option>
-                    <option value="4">Vila Oculta da Nuvem</option>
-                    <option value="5">Vila Oculta da Areia</option>
-                    <option value="6">Vila Oculta do Som</option>
-                </form>
-            </section>
+                    <option value="">Vila Oculta da Folha</option>
+                    <option value="">Vila Oculta da Névoa</option>
+                    <option value="">Vila Oculta da Pedra</option>
+                    <option value="">Vila Oculta da Nuvem</option>
+                    <option value="">Vila Oculta da Areia</option>
+                    <option value="">Vila Oculta do Som</option>
+            </div>
         </div>
     </header>
-
-    <script src="./js/cadastro-login.js"></script>
 </body>
 
 </html>
