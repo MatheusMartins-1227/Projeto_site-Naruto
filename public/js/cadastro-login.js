@@ -19,22 +19,17 @@ document.querySelector('#btCadastro')
 
 //  VALIDAÇÃO DE CADASTRO
 
-function cadastrar() {
-  const email = input_email.value;
-  const senha = input_senha.value;
-  const conf_sennha = input_conf_senha;
+function validar_cadastro() {
+  var email_cad = input_email_cad.value;
+  var senha_cad = input_senha_cad.value;
+  var conf_senha_cad = input_conf_senha_cad.value;
 
-  // if (email.indexOf("@") > -1) {
-  //   alert("Tem arroba !");
-  // } else {
-  //   alert("Não tem arroba !");
-  // }
 
- 
-  if ( senha != conf_sennha) {
-    alert("senhas diferentes")
+  if(senha_cad != conf_senha_cad || email_cad == ""){
+    alert("ERRO! senhas se diferem")
   }else {
-    alert("cadastrado")
+    alert("sucesso")
   }
 
+  return {entrar}
 }
