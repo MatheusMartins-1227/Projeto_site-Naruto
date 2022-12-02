@@ -8,7 +8,7 @@
 }
 
 /* HEADER */
-
+ 
 header .logo {
   position: relative;
   left: 50px;
@@ -26,8 +26,8 @@ body {
 
 .container {
   padding: 6px;
-  width: 350px;
-  height: 470px;
+  width: 360px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;

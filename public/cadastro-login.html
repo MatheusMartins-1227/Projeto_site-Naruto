@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="./css/cadastro-login.css">
     <link rel="icon" type="image/png" href="./assets/icons/profile2user.png" />
     <script src="./js/cadastro-login.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css"> -->
+
 </head>
 
 <body>
@@ -31,10 +36,14 @@
                 <h3>Senha</h3>
                 <input type="password" id="input_senha_log" placeholder="******" />
                 <button type="button" onclick="validarLogin()">Entrar</button>
+                <audio id="audio_triste"
+                    src="./audio/naruto-sadness-and-sorrow-violin-cover-taylor-davis_eCE59GG8.mp3"></audio>
                 <a class="botao_home" href="index.html">Home</a>
             </div>
- 
+
             <div id="cadastrar">
+                <h3>Nome</h3>
+                <input type="text" id="input_nome_cad" placeholder="Seu nome">
                 <h3>Seu email</h3>
                 <input type="text" id="input_email_cad" placeholder="SeuEmail@.com" />
                 <h3>Sua senha</h3>
