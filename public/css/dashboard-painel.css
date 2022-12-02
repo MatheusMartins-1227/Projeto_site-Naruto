@@ -98,3 +98,10 @@ body {
     position: relative;
     left: 13%;
 }
+
+.grafico {
+    width: 50vw;
+    position: relative;
+    left: 25%;
+    bottom: 60%;
+}
