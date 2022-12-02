@@ -32,6 +32,8 @@ function validarCadastro () {
   const senha = input_senha_cad.value;
   const conf_senha = input_conf_senha_cad.value;
 
+  var validacao_dados   
+
   if (email == "") {
     alert("Informe seu email");
     input_email_cad.style.borderColor = "#ff0000";
@@ -41,14 +43,25 @@ function validarCadastro () {
     input_email_cad.style.borderColor = "#ff0000";
   }
   else if (senha == "") {
-    alert("informe uma senha")
+    alert("informe uma senha");
+    input_email_cad.style.borderColor = "#00ff00";
+    input_senha_cad.style.borderColor = "#ff0000";
   }  
   else if (senha.length < 5){
     alert("A senha deve possuir no mínimo 5 caracteres")
+    input_senha_cad.style.borderColor = "#ff0000";
   }
   else if (senha != conf_senha){
     alert("senhas se diferem")
-  } 
+    input_senha_cad.style.borderColor = "#ff0000";
+    input_conf_senha_cad.style.borderColor = "#ff0000";
+  }
+  else{
+    alert("cadastro realizado com sucesso !!!")
+    input_email_cad.style.borderColor = "#00ff00";
+    input_senha_cad.style.borderColor = "#00ff00";
+    input_conf_senha_cad.style.borderColor = "#00ff00";
+  }
 }
 
 // validacao do login
@@ -59,7 +72,11 @@ function validarLogin() {
 
     if (email_log == "" || senha_log == "") {
       alert("Erro")
+      input_senha_log.style.borderColor = "#ff0000";
+      input_email_log.style.borderColor = "#ff0000";
     }else {
       alert("entrando")
+      input_email_log.style.borderColor = "#00ff00";
+      input_senha_log.style.borderColor = "#00ff00";
     }
 }
