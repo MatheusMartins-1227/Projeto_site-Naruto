@@ -18,7 +18,7 @@ function invalidEmailChar(email) {
       if (valid_chars.indexOf(char_email) == -1) {
           invalid_char = true;
       }
-  }
+  } 
   if (invalid_char) {
       return true;
   }
@@ -136,7 +136,7 @@ function validarCadastro () {
         toast.addEventListener('mouseenter', Swal.stopTimer)
         toast.addEventListener('mouseleave', Swal.resumeTimer)
       }
-    })
+    }) 
     
     Toast.fire({
       icon: 'warning',
@@ -171,28 +171,13 @@ function validarCadastro () {
   }
   else{
     // alert("cadastro realizado com sucesso !!!")
-    const Toast = Swal.mixin({
-      toast: true,
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
     
-    Toast.fire({
-      icon: 'success',
-      title: 'cadastro realizado com sucesso !!! TO CERTOO'
-    })
     input_email_cad.style.borderColor = "#00ff00";
     input_senha_cad.style.borderColor = "#00ff00";
     input_conf_senha_cad.style.borderColor = "#00ff00";
   }
 
-  if (!dados_invalidos) {
+  if (!dados_invalidos) { 
     fetch("/usuarios/cadastrar", {
       method: "POST",
       headers: {
@@ -212,13 +197,26 @@ function validarCadastro () {
       if (resposta.ok) {
         //Cadastro realizado
         resposta.json().then(json => {
-          alert('Here')
           console.log(json);
           console.log(JSON.stringify(json));
 
-          sessionStorage.EMAIL_USUARIO = json.email;
-          sessionStorage.NOME_USUARIO = json.nome;
-          sessionStorage.ID_USUARIO = json.id;
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'success',
+            title: 'cadastro realizado com sucesso !!! TO CERTOO'
+          })
+
       });
           abaLogar();
       } else {
@@ -236,6 +234,8 @@ function validarCadastro () {
 function validarLogin() {
   const email_log = input_email_log.value;
   const senha_log = input_senha_log.value;
+
+  var dados_invalidos = false;
 
     if (email_log == "" || senha_log == "") {
       // alert("Erro")
@@ -259,6 +259,8 @@ function validarLogin() {
       audio_triste.play();
       input_senha_log.style.borderColor = "#ff0000";
       input_email_log.style.borderColor = "#ff0000";
+
+      var dados_invalidos = true;
     }else {
       // alert("entrando")
       const Toast = Swal.mixin({
@@ -280,5 +282,84 @@ function validarLogin() {
 
       input_email_log.style.borderColor = "#00ff00";
       input_senha_log.style.borderColor = "#00ff00";
+    }
+
+    if(!dados_invalidos) {
+      fetch("/usuarios/autenticar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            emailServer: email_log,
+            senhaServer: senha_log
+        })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
+    
+        if (resposta.ok) {
+            console.log(resposta);
+    
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+    
+                sessionStorage.EMAIL_USUARIO = json.email;
+                sessionStorage.NOME_USUARIO = json.nome;
+                sessionStorage.ID_USUARIO = json.id;
+
+                const Toast = Swal.mixin({
+                  toast: true,
+                  position: 'top-end',
+                  showConfirmButton: false,
+                  timer: 3000,
+                  timerProgressBar: true,
+                  didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                  }
+                })
+                
+                Toast.fire({
+                  icon: 'success',
+                  title: 'Entrando...'
+                })
+
+                setTimeout(() => {
+                  location = "dashboard/mydatabook.html"
+                }, 1000)
+    
+            });
+    
+        } else {
+    
+            console.log("Houve um erro ao tentar realizar o login!");
+    
+            resposta.text().then(texto => {
+                console.error(texto);
+            });
+
+            const Toast = Swal.mixin({
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+              }
+            })
+            
+            Toast.fire({
+              icon: 'error',
+              title: 'Erro!...'
+            })
+
+        }
+    
+    }).catch(function (erro) {
+        console.log(erro);
+    })
     }
 }

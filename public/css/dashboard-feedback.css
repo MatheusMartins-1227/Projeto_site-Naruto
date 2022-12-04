@@ -98,3 +98,97 @@ body {
     position: relative;
     left: 13%;
 }
+
+.comentarios_titulo {
+    position: relative;
+    left: 250%;
+    bottom: 75%;
+    width: 175%;
+}
+
+.sub {
+    color: #E86F40;
+    position: relative;
+    left: 20px;
+}
+
+.comentarios_titulo h3 {
+    font-size: 30px;
+}
+
+.feedback_form {
+    position: relative;
+    left: 160%;
+    bottom: 60%;
+    width: 139%;
+    height: 170px;
+}
+
+.feedback_form p {
+    position: relative;
+    left: 20;
+    font-size: 25px;
+}
+
+
+.comentarios_tabela {
+    border: solid 1px;
+    border-radius: 20px;
+    width: 240%;
+    height: 210px;
+    position: relative;
+    right: 10%;
+}
+
+.comentarios_tabela p {
+    position: relative;
+    left: 10px;
+}
+
+.feedback_form h3 {
+    font-size: 40px;
+    position: relative;
+    right: 20px
+}
+
+input {
+    position: relative;
+    left: 10px;
+}
+
+.submisse {
+    /* display: none; */
+    position: relative;
+    left: 320%;
+    bottom: 130%;
+}
+
+.subimisse_titulo {
+    width: 139%;
+}
+
+.subimisse_titulo h3 {
+    font-size: 30px;
+}
+
+.submisse_card {
+    border: solid 3px grey;
+    border-radius: 20px;
+    height: 130px;
+    width: 150%;
+}
+
+.submisse_card h3 {
+    position: relative;
+    left: 10%;
+}
+
+/* MURAL DE AVISO DATABASE */
+
+.feedback_section {
+    position: relative;
+    border: solid 1px;
+    left: 150%;
+    bottom: 70%;
+    width: 290%;
+}

@@ -37,11 +37,30 @@
             </div>
         </div>
 
-        <div class="grafico">
-            <div>
-                <canvas id="myChart"></canvas>
+        <div class="grafico_geral">
+            <div class="grafico_cima">
+                <div>
+                    <canvas id="myChart_chakra"></canvas>
+                    <h3>Média do chakra</h3>
+                </div>
+                <div>
+                    <canvas id="myChart_velocidade"></canvas>
+                    <h3>Média da velocidade</h3>
+                </div>
+            </div>
+
+            <div class="grafico_baixo">
+                <div>
+                    <canvas id="myChart_resistencia"></canvas>
+                    <h3>Média da resistência</h3>
+                </div>
+                <div>
+                    <canvas id="myChart_forca"></canvas>
+                    <h3>Média da força</h3>
+                </div>
             </div>
         </div>
+
 
     </section>
 
@@ -49,15 +68,15 @@
 </body>
 
 <script>
-    const ctx = document.getElementById('myChart');
+    const ctchakra = document.getElementById('myChart_chakra');
 
-    new Chart(ctx, {
-        type: 'bar',
+    new Chart(ctchakra, {
+        type: 'doughnut',
         data: {
-            labels: ['Hashirama', 'Tobirama', 'Hiruzen'],
+            labels: ['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto', 'Sasuke', 'Sakura', 'Rocke Lee'],
             datasets: [{
                 label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                data: [12, 19, 3, 10, 3, 21, 33, 17, 9, 1],
                 borderWidth: 1
             }]
         },
@@ -69,6 +88,74 @@
             }
         }
     });
+
+
+    const ctvelo = document.getElementById('myChart_velocidade');
+
+    new Chart(ctvelo, {
+        type: 'doughnut',
+        data: {
+            labels: ['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto', 'Sasuke', 'Sakura', 'Rocke Lee'],
+            datasets: [{
+                label: '# of Votes',
+                data: [4, 19, 3, 10, 3, 5, 22, 17, 9, 1],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const ctresi = document.getElementById('myChart_resistencia');
+
+    new Chart(ctresi, {
+        type: 'doughnut',
+        data: {
+            labels: ['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto', 'Sasuke', 'Sakura', 'Rocke Lee'],
+            datasets: [{
+                label: '# of Votes',
+                data: [19, 32, 3, 4, 3, 21, 33, 50, 9, 22],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const ctfor = document.getElementById('myChart_forca');
+
+    new Chart(ctfor, {
+        type: 'doughnut',
+        data: {
+            labels: ['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto', 'Sasuke', 'Sakura', 'Rocke Lee'],
+            datasets: [{
+                label: '# of Votes',
+                data: [11, 19, 3, 55, 3, 31, 33, 17, 9, 1],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+
+
 </script>
 
 </html>

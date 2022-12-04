@@ -1,96 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Meu Databook</title>
     <link rel="stylesheet" href="../css/dashboard-databook.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/"></script>
 </head>
+
 <body>
 
     <!-- DASHBOARD -->
-    
+
     <section class="dashboard">
-    <div class="container_dashboard">
-        <div class="menu_form">
-            <div class="usuario">
-                <h3>Bem-Vindo<br> Nome usuario</h3>
+        <div class="container_dashboard">
+            <div class="menu_form">
+                <div class="usuario">
+                    <h3>Bem-Vindo<br> Nome usuario</h3>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <a class="databook" href="../dashboard/mydatabook.html">
+                            <p>Meu dataBook</p>
+                        </a>
+                        <a class="painel" href="../dashboard/painel.html">
+                            <p>Painel</p>
+                        </a>
+                        <a class="feedback" href="../dashboard/feedback.html">
+                            <p>FeedBacks</p>
+                        </a>
+                        <a class="home" onclick="sair()">
+                            <p>Sair</p>
+                        </a>
+                    </ul>
+                </div>
             </div>
-            <div class="menu">
-                <ul>
-                    <a class="databook" href="../dashboard/mydatabook.html"><p>Meu dataBook</p></a>
-                    <a class="painel" href="../dashboard/painel.html"><p>Painel</p></a>
-                    <a class="feedback" href="../dashboard/feedback.html"><p>FeedBacks</p></a>
-                    <a class="home" href="../index.html"><p>Home</p></a>
-                </ul>
+
+            <!-- MY DATABOOK -->
+
+            <div class="form_principal">
+                <div class="form_titulo">
+                    <h3>MEU DATABOOK</h3>
+                </div>
+                <div class="card_principal">
+                    <h3>Personagem:<br></h3>
+                    <select name="" id="select_personagens">
+                        <option value="0">Selecione:</option>
+                        <option value="1">Hashirama</option>
+                        <option value="2">Tobirama</option>
+                        <option value="3">Hiruzen</option>
+                    </select><br><br>
+                    <h3>Atributos:<br></h3>
+                    <p>Força: <br></p>
+                    <input type="number" id="input_forca">
+                    <p>Resistência: <br></p>
+                    <input type="number" id="input_resistencia"> <br>
+                    <p>Velocidade: <br></p>
+                    <input type="number" id="input_velocidade">
+                    <p>Chakra: <br></p>
+                    <input type="number" id="input_chakra"> <br><br><br>
+                    <button id="botao" onclick="catalogar()">
+                        Catalogar Personagem
+                    </button>
+                </div>
             </div>
+
+            <div class="regras">
+                <div class="regras_titulo">
+                    <h3>Regras</h3>
+                </div>
+                <div class="regra_texto">
+                    <p>Todos os atributos são avaliados de 0 á 100%</p>
+                </div>
+            </div>
+
+            <div class="sucesso">
+                <div class="sucesso_texto">
+                    <p>Catalogado<br> com<br> sucesso !!!</p>
+                </div>
+            </div>
+
         </div>
+    </section>
 
-        <!-- MY DATABOOK -->
-
-        <div class="form_principal">
-            <div class="form_titulo">
-                <h3>MEU DATABOOK</h3>
-            </div>
-            <div class="card_principal">
-                <p>Personagem:<br></p>
-                <select name="" id="personagens">
-                    <option value="0">Selecione:</option>
-                    <option value="1">Hashirama</option>
-                    <option value="2">Tobirama</option>
-                    <option value="3">Hiruzen</option>
-                </select>
-                <p>Atributos:<br></p>
-                Força: <br>
-                <input type="number" id="input_forca">
-                <p>Resistência: <br></p>
-                <input type="number" id="input_resistencia"> <br>
-                <p>Velocidade: <br></p>
-                <input type="number" id="input_velocidade"> 
-                <p>Chakra: <br></p>
-                <input type="number" id="input_chakra"> <br>
-                <button onclick="catalogar()">
-                    Catalogar Personagem
-                </button>
-            </div>
-        </div>
-
-        <div class="regras">
-            <div class="regras_titulo">
-                <h3>Regras</h3>
-            </div>
-            <div class="regra_texto">
-                <p>Todos os atributos são avaliados de 0 á 100%</p>
-            </div>
-        </div>
-
-        <div class="sucesso">
-            <div class="sucesso_texto">
-                <p>Catalogado<br> com<br> sucesso !!!</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-    
 </body>
+
 </html>
-
-<script>
-    function catalogar() {
-        var forca = Number(input_forca.value);
-        var resistencia = Number(input_resistencia.value);
-        var velocidade = Number(input_velocidade.value);
-        var chakra = Number(input_chakra.value);
-
-        if (forca < 0 || forca > 100 ||
-            resistencia < 0 || resistencia > 100 ||
-            velocidade < 0 || velocidade > 100 ||
-            chakra < 0 || chakra > 100) {
-            alert("errado")
-        }else {
-            alert("catalogado com sucesso !!!")
-        }
-    }
-</script>

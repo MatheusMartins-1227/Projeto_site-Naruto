@@ -82,7 +82,7 @@ body {
 input[type="text"],
 input[type="password"] {
   /* border: none; */
-  margin-top: 40px;
+  margin-top: 25px;
   border-radius: 60px;
   padding: 8px 0 8px 35px;
   outline: none;

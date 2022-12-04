@@ -72,7 +72,7 @@ header nav {
 main {
     background-image: url("../assets/imagens/valores-vale_do_fim.jfif");
     background-size: cover;
-    height: 1040px;
+    height: 1540px;
 }
 
 .container {
@@ -174,7 +174,7 @@ main {
 .texto_amizade {
     position: relative;
     width: 35%;
-    left: 45%;
+    left: 40%;
 }
 
 .slider_amizade{
@@ -265,5 +265,61 @@ input[type=radio] {
 }
 
 .uniao {
-    background-color: red;
+    border: solid 1px;
+    border-radius: 20px;
+    width: 50%;
+    height: 140px;
+    position: relative;
+    left: 25%;
+    background-color: #333;
+    top: 10px;
+}
+
+.frase_amizade p {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.ideologia .ideologia_titulo {
+    width: 35%;
+    position: relative;
+    left: 40%;
+    top: 20px;
+}
+
+.ideologia_texto {
+    border: solid 1px;
+    border-radius: 20px;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    background-color: #333;
+}
+
+.ideologia_texto p {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.sites {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 2%;
+}
+
+.sites a {
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    background: #E86F40;
+    border: 2px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.sites a:hover {
+    background: #F9EF11;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
 }

@@ -41,7 +41,7 @@ body {
     bottom: 2px;
     right: 2px;
 }
-
+ 
 .usuario h3 {
     width: 50%;
     position: relative;
@@ -106,7 +106,7 @@ body {
     width: 50vw;
     height: 55vh;
     position: relative;
-    bottom: 50%;
+    bottom: 60%;
     left: 120%;
     border: solid 1px;
     border-radius: 20px;
@@ -134,7 +134,7 @@ body {
     position: relative;
     bottom: 100%;
     left: 410%;
-    height: 145px;
+    height: 100px;
     border: solid 1px;
     border-radius: 20px;
     background-color: white;
@@ -165,5 +165,49 @@ body {
 }
 
 .card_principal {
-    border: solid 1px blueviolet;
+    /* border: solid 1px;
+    border-radius: 20px; */
+    width: 50%;
+    height: 300px;
+    position: relative;
+    left: 28%;
+}
+
+.card_principal p {
+    position: relative;
+    left: 25%;
+    font-size: 20px;
+}
+
+.card_principal h3 {
+    position: relative;
+    left: 25%;
+    font-size: 20px;
+}
+
+input {
+    border-color: #E86F40;
+    border-radius: 20px;
+    position: relative;
+    left: 20%;
+}
+
+#select_personagens {
+    position: relative;
+    left: 30%;
+}
+
+#botao {
+    position: relative;
+    left: 15%;
+    border-radius: 20px;
+    padding: 10px;
+    color: red;
+    bottom: 12px;
+    cursor: pointers;
+}
+
+#botao:hover {
+    background: #E86F40;
+    box-shadow: 0px 6px px rgba(0, 0, 0, 0.25);
 }

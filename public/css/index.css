@@ -215,6 +215,23 @@ main {
     top: 10px;
 }
 
+.texto_sobre a {
+    background: #F9EF11;
+    border: 2px solid #000000;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 10px;
+    position: relative;
+    left: 30%;
+    top: 10px;
+}
+
+.texto_sobre a:hover {
+    background: #E86F40;
+    box-shadow: 0px 6px px rgba(0, 0, 0, 0.25);
+}
+
  .divisao_carrosel {
     display: flex;
     position: relative;

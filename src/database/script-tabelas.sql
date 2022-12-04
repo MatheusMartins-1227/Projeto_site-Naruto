@@ -27,12 +27,12 @@ fkUsuario int,
 foreign key (fkUsuario) references usuario (id)
 );
 
-create table feedback(
-idFeedback int primary key auto_increment,
-assunto varchar(55),
-descricao varchar(250),
-fkUsuario int,
-foreign key (fkUsuario) references usuario (id)
+CREATE TABLE aviso (
+id INT PRIMARY KEY AUTO_INCREMENT,
+titulo VARCHAR(100),
+descricao VARCHAR(150),
+fk_usuario INT,
+FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
 

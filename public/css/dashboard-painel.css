@@ -16,7 +16,7 @@ body {
 
 .dashboard-painel {
     width: 90%;
-    height: 92vh;
+    height: 110vh;
     position: relative;
     left: 5%;
     top: 20px;
@@ -26,7 +26,7 @@ body {
 
 .container_dashboard {
     width: 20%;
-    height: 92vh;
+    height: 110vh;
     border: solid 1px;
     border-radius: 20px;
     background-image: url("../assets/imagens/menu-3.jfif");
@@ -99,9 +99,31 @@ body {
     left: 13%;
 }
 
-.grafico {
-    width: 50vw;
+.grafico_cima {
+    width: 25vw;
     position: relative;
     left: 25%;
     bottom: 60%;
+    display: flex;
+}
+
+.grafico_baixo {
+    width: 25vw;
+    position: relative;
+    left: 25%;
+    bottom: 60%;
+    display: flex;
+}
+
+.grafico_cima .grafico_baixo {
+    display: flex;
+    width: 50vw;
+}
+
+.grafico_geral {
+    width: 70%;
+    height: 500px;
+    position: relative;
+    left: 15%;
+    bottom: 55%;
 }
