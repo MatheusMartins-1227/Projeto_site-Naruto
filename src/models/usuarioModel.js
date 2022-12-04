@@ -3,7 +3,7 @@ var database = require("../database/config")
 function listar() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
-        SELECT * FROM usuario;
+    SELECT ROUND(AVG(chakra),2) as media_chakra, ROUND(AVG(velocidade),2) as media_velocidade, ROUND(AVG(resistencia),2) as media_resistencia, ROUND(AVG(forca),2) as media_forca, nomePersonagem FROM mydatabook GROUP BY nomePersonagem;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

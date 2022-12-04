@@ -10,11 +10,7 @@ function testar(req, res) {
 function listar(req, res) {
     usuarioModel.listar()
         .then(function (resultado) {
-            if (resultado.length > 0) {
-                res.status(200).json(resultado);
-            } else {
-                res.status(204).send("Nenhum resultado encontrado!")
-            }
+            res.status(200).json(resultado);
         }).catch(
             function (erro) {
                 console.log(erro);
