@@ -8,10 +8,10 @@
     <title>Dashboard | Meu Databook</title>
     <link rel="stylesheet" href="../css/dashboard-databook.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/"></script>
+    <script src="../js/mydatabook.js"></script>
 </head>
 
-<body>
+<body onload="{nomeUsuario();personagens()}">
 
     <!-- DASHBOARD -->
 
@@ -19,7 +19,8 @@
         <div class="container_dashboard">
             <div class="menu_form">
                 <div class="usuario">
-                    <h3>Bem-Vindo<br> Nome usuario</h3>
+                    <h3>Bem-Vindo</h3>
+                    <h3 id="nome_usuario"></h3>
                 </div>
                 <div class="menu">
                     <ul>
@@ -32,7 +33,7 @@
                         <a class="feedback" href="../dashboard/feedback.html">
                             <p>FeedBacks</p>
                         </a>
-                        <a class="home" onclick="sair()">
+                        <a class="sair" onclick="sair()">
                             <p>Sair</p>
                         </a>
                     </ul>
@@ -47,11 +48,8 @@
                 </div>
                 <div class="card_principal">
                     <h3>Personagem:<br></h3>
-                    <select name="" id="select_personagens">
-                        <option value="0">Selecione:</option>
-                        <option value="1">Hashirama</option>
-                        <option value="2">Tobirama</option>
-                        <option value="3">Hiruzen</option>
+                    <select id="select_personagens">
+                        <option value="0">Selecione:</option>                        
                     </select><br><br>
                     <h3>Atributos:<br></h3>
                     <p>Força: <br></p>

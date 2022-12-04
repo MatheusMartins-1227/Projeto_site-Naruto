@@ -7,16 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | painel</title>
     <link rel="stylesheet" href="../css/dashboard-painel.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/chart.js"></script>
+    <script src="../js/painel.js"></script>
 </head>
 
-<body>
+<body onload="{nomeUsuario(); criarGraficos()}">
+
+    <!-- DASHBOARD -->
 
     <section class="dashboard-painel">
         <div class="container_dashboard">
             <div class="menu_form">
                 <div class="usuario">
-                    <h3>Bem-Vindo<br> Nome usuario</h3>
+                    <h3>Bem-Vindo</h3>
+                    <h3 id="nome_usuario"></h3>
                 </div>
                 <div class="menu">
                     <ul>
@@ -29,8 +33,8 @@
                         <a class="feedback" href="../dashboard/feedback.html">
                             <p>FeedBacks</p>
                         </a>
-                        <a class="home" href="../index.html">
-                            <p>Home</p>
+                        <a class="sair" onclick="sair()">
+                            <p>Sair</p>
                         </a>
                     </ul>
                 </div>
@@ -66,96 +70,5 @@
 
 
 </body>
-
-<script>
-    const ctchakra = document.getElementById('myChart_chakra');
-
-    new Chart(ctchakra, {
-        type: 'doughnut',
-        data: {
-            labels: ['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto', 'Sasuke', 'Sakura', 'Rocke Lee'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 10, 3, 21, 33, 17, 9, 1],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-
-    const ctvelo = document.getElementById('myChart_velocidade');
-
-    new Chart(ctvelo, {
-        type: 'doughnut',
-        data: {
-            labels: ['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto', 'Sasuke', 'Sakura', 'Rocke Lee'],
-            datasets: [{
-                label: '# of Votes',
-                data: [4, 19, 3, 10, 3, 5, 22, 17, 9, 1],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-    const ctresi = document.getElementById('myChart_resistencia');
-
-    new Chart(ctresi, {
-        type: 'doughnut',
-        data: {
-            labels: ['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto', 'Sasuke', 'Sakura', 'Rocke Lee'],
-            datasets: [{
-                label: '# of Votes',
-                data: [19, 32, 3, 4, 3, 21, 33, 50, 9, 22],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-    const ctfor = document.getElementById('myChart_forca');
-
-    new Chart(ctfor, {
-        type: 'doughnut',
-        data: {
-            labels: ['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto', 'Sasuke', 'Sakura', 'Rocke Lee'],
-            datasets: [{
-                label: '# of Votes',
-                data: [11, 19, 3, 55, 3, 31, 33, 17, 9, 1],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-
-
-
-</script>
 
 </html>

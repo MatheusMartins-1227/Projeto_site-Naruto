@@ -24,6 +24,20 @@ function listar(req, res) {
         );
 }
 
+function listarPersonagemCadastrado(req, res) {
+    var idUsuario = req.params.idUsuario;
+    usuarioModel.listarPersonagemCadastrado(idUsuario)
+        .then(function (resultado) {
+            res.status(200).json(resultado);
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 function entrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
@@ -64,6 +78,7 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
+    var vila = req.body.vilaServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -75,7 +90,7 @@ function cadastrar(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha)
+        usuarioModel.cadastrar(nome, email, senha, vila)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -93,9 +108,36 @@ function cadastrar(req, res) {
     }
 }
 
+function cadastrarPersonagem(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var personagem = req.body.personagemServer;
+    var forca = req.body.forcaServer;
+    var resistencia = req.body.resistenciaServer;
+    var velocidade = req.body.velocidadeServer;
+    var chakra = req.body.chakraServer;
+    var id_usuario = req.body.idUsuarioServer;
+    usuarioModel.cadastrarPersonagem(personagem, forca, velocidade, resistencia, chakra, id_usuario)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+}
+
 module.exports = {
     entrar,
     cadastrar,
+    cadastrarPersonagem,
     listar,
+    listarPersonagemCadastrado,
     testar
 }

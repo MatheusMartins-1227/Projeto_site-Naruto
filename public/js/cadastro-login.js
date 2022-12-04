@@ -33,6 +33,7 @@ function validarCadastro () {
   const email = input_email_cad.value.toLowerCase();
   const senha = input_senha_cad.value;
   const conf_senha = input_conf_senha_cad.value;
+  const vila_cad = sua_aldeia.value;
 
   var dados_invalidos = false;
 
@@ -169,6 +170,25 @@ function validarCadastro () {
 
     dados_invalidos = true;
   }
+  else if (vila_cad == 0) {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'error',
+      title: 'Selecione uma vila'
+    })
+    dados_invalidos = true;
+  }
   else{
     // alert("cadastro realizado com sucesso !!!")
     
@@ -188,7 +208,8 @@ function validarCadastro () {
           // Agora vá para o arquivo routes/usuario.js
           nomeServer: nome_cad,
           emailServer: email,
-          senhaServer: senha
+          senhaServer: senha,
+          vilaServer: vila_cad,
       })
   }).then(function (resposta) {
 
@@ -307,6 +328,7 @@ function validarLogin() {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
+                sessionStorage.VILA_USUARIO = json.suaVila;
 
                 const Toast = Swal.mixin({
                   toast: true,
@@ -361,5 +383,5 @@ function validarLogin() {
     }).catch(function (erro) {
         console.log(erro);
     })
-    }
+  }
 }
