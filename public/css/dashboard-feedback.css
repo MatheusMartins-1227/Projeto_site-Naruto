@@ -157,8 +157,7 @@ input {
     left: 10px;
 }
 
-.submisse {
-    /* display: none; */
+/* .submisse {
     position: relative;
     left: 320%;
     bottom: 130%;
@@ -182,14 +181,37 @@ input {
 .submisse_card h3 {
     position: relative;
     left: 10%;
-}
+} */
 
 /* MURAL DE AVISO DATABASE */
 
 .feedback_section {
     position: relative;
     border: solid 1px;
+    border-radius: 20px;
     left: 150%;
     bottom: 70%;
     width: 290%;
+}
+
+.avisos {
+    margin: 20px;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    background-color: #F9EF11;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+    width: 10%;
+}
+
+button:hover {
+    background: #E86F40;
+    box-shadow: 0px 6px px rgba(0, 0, 0, 0.25);
 }

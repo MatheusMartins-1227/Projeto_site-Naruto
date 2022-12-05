@@ -46,10 +46,26 @@ function personagens () {
         console.log(`#ERRO: ${resposta}`);
     });
 
-    function criarOptions() {
+    function criarOptions() { 
         if (vila == "folha") {
             if (personagens_cadastrados.length == personagens_vila_folha.length){
-                alert("Todos os personagens dessa vila já foram cadastrados");
+                // alert("Todos os personagens dessa vila já foram cadastrados");
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                  })
+                  
+                  Toast.fire({
+                    icon: 'warning',
+                    title: 'Todos os personagens dessa vila já foram cadastrados'
+                  })
             }
             for (let index = 0; index < personagens_vila_folha.length; index++) {
                 const personagem = personagens_vila_folha[index];
@@ -65,7 +81,23 @@ function personagens () {
             }
         } else if (vila == "nevoa") {
             if (personagens_cadastrados.length == personagens_vila_nevoa.length){
-                alert("Todos os personagens dessa vila já foram cadastrados");
+                // alert("Todos os personagens dessa vila já foram cadastrados");
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                  })
+                  
+                  Toast.fire({
+                    icon: 'warning',
+                    title: 'Todos os personagens dessa vila já foram cadastrados'
+                  })
             }
             for (let index = 0; index < personagens_vila_nevoa.length; index++) {
                 const personagem = personagens_vila_nevoa[index];
@@ -81,7 +113,23 @@ function personagens () {
             }
         } else if (vila == "pedra") {
             if (personagens_cadastrados.length == personagens_vila_pedra.length){
-                alert("Todos os personagens dessa vila já foram cadastrados");
+                // alert("Todos os personagens dessa vila já foram cadastrados");
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                  })
+                  
+                  Toast.fire({
+                    icon: 'warning',
+                    title: 'Todos os personagens dessa vila já foram cadastrados'
+                  })
             }
             for (let index = 0; index < personagens_vila_pedra.length; index++) {
                 const personagem = personagens_vila_pedra[index];
@@ -97,7 +145,23 @@ function personagens () {
             }
         } else if (vila == "nuvem") {
             if (personagens_cadastrados.length == personagens_vila_nuvem.length){
-                alert("Todos os personagens dessa vila já foram cadastrados");
+                // alert("Todos os personagens dessa vila já foram cadastrados");
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                  })
+                  
+                  Toast.fire({
+                    icon: 'warning',
+                    title: 'Todos os personagens dessa vila já foram cadastrados'
+                  })
             }
             for (let index = 0; index < personagens_vila_nuvem.length; index++) {
                 const personagem = personagens_vila_nuvem[index];
@@ -113,7 +177,23 @@ function personagens () {
             }
         } else if (vila == "areia") {
             if (personagens_cadastrados.length == personagens_vila_areia.length){
-                alert("Todos os personagens dessa vila já foram cadastrados");
+                // alert("Todos os personagens dessa vila já foram cadastrados");
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                  })
+                  
+                  Toast.fire({
+                    icon: 'warning',
+                    title: 'Todos os personagens dessa vila já foram cadastrados'
+                  });
             }
             for (let index = 0; index < personagens_vila_areia.length; index++) {
                 const personagem = personagens_vila_areia[index];
@@ -129,7 +209,23 @@ function personagens () {
             }
         } else {
             if (personagens_cadastrados.length == personagens_vila_som.length){
-                alert("Todos os personagens dessa vila já foram cadastrados");
+                // alert("Todos os personagens dessa vila já foram cadastrados");
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                  })
+                  
+                  Toast.fire({
+                    icon: 'warning',
+                    title: 'Todos os personagens dessa vila já foram cadastrados'
+                  });
             }
             for (let index = 0; index < personagens_vila_som.length; index++) {
                 const personagem = personagens_vila_som[index];
