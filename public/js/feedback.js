@@ -22,7 +22,7 @@ function nomeUsuario () {
             titulo: form_postagem.titulo.value,
             descricao: form_postagem.descricao.value
         }
-
+ 
         fetch(`/avisos/publicar/${idUsuario}`, {
             method: "post",
             headers: {
@@ -34,7 +34,7 @@ function nomeUsuario () {
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
+                window.alert("Post realizado com sucesso pelo usuario " + nome + "!");
                 location.reload();
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");

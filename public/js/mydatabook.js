@@ -4,7 +4,7 @@ const nome = sessionStorage.NOME_USUARIO;
 if(email == null){
     location = "../cadastro-login.html"
 }
-
+ 
 function sair() {
     sessionStorage.clear();
     

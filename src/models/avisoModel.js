@@ -1,6 +1,26 @@
 var database = require("../database/config");
 
-function listar(idUsuario) {
+function listar() {
+    console.log("ACESSEI O AVISO  MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
+    var instrucao = `
+        SELECT 
+            a.id AS idAviso,
+            a.titulo,
+            a.descricao,
+            a.fk_usuario,
+            u.id AS idUsuario,
+            u.nome,
+            u.email,
+            u.senha
+        FROM aviso a
+            INNER JOIN usuario u
+                ON a.fk_usuario = u.id;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function graficos(idUsuario) {
     console.log("ACESSEI O AVISO  MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
     SELECT ROUND(AVG(chakra),2) as media_chakra, ROUND(AVG(velocidade),2) as media_velocidade, ROUND(AVG(resistencia),2) as media_resistencia, ROUND(AVG(forca),2) as media_forca FROM mydatabook WHERE fkUsuario = ${idUsuario};
@@ -80,6 +100,7 @@ function deletar(idAviso) {
 
 module.exports = {
     listar,
+    graficos,
     listarPorUsuario,
     pesquisarDescricao,
     publicar,

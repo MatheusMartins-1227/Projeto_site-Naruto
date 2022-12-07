@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'irish grover';
+    resize: none;
 }
 
 body {
@@ -103,7 +104,7 @@ body {
 .comentarios_titulo {
     position: relative;
     left: 250%;
-    bottom: 75%;
+    bottom: 80%;
     width: 175%;
 }
 
@@ -157,31 +158,6 @@ input {
     left: 10px;
 }
 
-/* .submisse {
-    position: relative;
-    left: 320%;
-    bottom: 130%;
-}
-
-.subimisse_titulo {
-    width: 139%;
-}
-
-.subimisse_titulo h3 {
-    font-size: 30px;
-}
-
-.submisse_card {
-    border: solid 3px grey;
-    border-radius: 20px;
-    height: 130px;
-    width: 150%;
-}
-
-.submisse_card h3 {
-    position: relative;
-    left: 10%;
-} */
 
 /* MURAL DE AVISO DATABASE */
 
@@ -190,7 +166,7 @@ input {
     border: solid 1px;
     border-radius: 20px;
     left: 150%;
-    bottom: 70%;
+    bottom: 80%;
     width: 290%;
 }
 
@@ -202,7 +178,7 @@ button {
     display: flex;
     flex-direction: column;
     line-height: 40px;
-    background-color: #F9EF11;
+    background-color: red;
     border-radius: 20px;
     border: 2px solid #000000;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
@@ -214,4 +190,13 @@ button {
 button:hover {
     background: #E86F40;
     box-shadow: 0px 6px px rgba(0, 0, 0, 0.25);
+}
+
+.enviar {
+    background-color: #F9EF11;
+}
+
+.feed-container {
+    overflow-y: scroll;
+    height: 100px;
 }
